@@ -1,0 +1,44 @@
+<div class="tt-new-trip__section">
+
+    <h2 class="tt-heading tt-heading__primary">
+        Add a city
+    </h2>
+
+    <label class="tt-heading__secondary">
+        City
+        <input class="tt-field tt-field__input" type="text" ng-model="app.data.destination_info.city">
+    </label>
+
+    <label class="tt-heading__secondary">
+        Country
+        <input class="tt-field tt-field__input" type="text" ng-model="app.data.destination_info.country">
+    </label>
+
+    <label class="tt-heading__secondary">
+        Days
+        <input class="tt-field tt-field__input" type="text" ng-model="app.data.destination_info.days">
+    </label>
+
+    <label class="tt-heading__secondary">
+        Lodging
+        <input class="tt-field tt-field__input" type="text" ng-model="app.data.destination_info.lodging">
+    </label>
+
+    <label class="tt-heading__secondary">
+        Highlights
+        <input class="tt-field tt-field__input" type="text" ng-model="app.data.destination_info.highlights">
+    </label>
+
+    <div class="tt-submit-btn">
+        <button class="tt-buttons__item btn-lg" ng-click="app.addDestination()">
+            Add another Destination
+        </button>
+
+        <button class="tt-buttons__item btn-lg" ng-click="app.reviewTrip()">
+            Review
+        </button>
+
+    </div>
+
+
+

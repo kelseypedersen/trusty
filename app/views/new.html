@@ -1,1 +1,48 @@
-<p>Add your trip</p>
+<div class="tt-new-trip__section">
+
+    <h2 class="tt-heading tt-heading__primary">
+        Add your trip!
+    </h2>
+
+    <label class="tt-heading__secondary">
+        Title
+        <input class="tt-field tt-field__input" type="text" ng-model="app.data.trip_info.title">
+    </label>
+
+    <label class="tt-heading__secondary">
+        Days
+        <input class="tt-field tt-field__input" type="text" ng-model="app.data.trip_info.days">
+    </label>
+
+    <label class="tt-heading__secondary">
+        Season
+        <label class="tt-heading__secondary">
+            Spring
+            <input class="tt-checkbox" type="checkbox" ng-model="app.data.trip_info.seasons.spring">
+        </label>
+        <label class="tt-heading__secondary">
+            Summer
+            <input class="tt-checkbox" type="checkbox" ng-model="app.data.trip_info.seasons.summer">
+        </label>
+        <label class="tt-heading__secondary">
+            Fall
+            <input class="tt-checkbox" type="checkbox" ng-model="app.data.trip_info.seasons.fall">
+        </label>
+        <label class="tt-heading__secondary">
+            Winter
+            <input class="tt-checkbox" type="checkbox" ng-model="app.data.trip_info.seasons.winter">
+        </label>
+    </label>
+
+    <label class="tt-heading__secondary">
+        Types
+        <input class="tt-checkbox" type="checkbox" ng-model="app.data.trip_info.activity_types">
+    </label>
+
+    <div class="tt-submit-btn">
+        <button class="tt-buttons__item btn-lg" ng-click="app.createTrip()">
+            Add my cities
+        </button>
+    </div>
+
+</div>

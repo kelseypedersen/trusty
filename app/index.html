@@ -21,11 +21,11 @@
 
 <body class="tt-app tt-body" ng-controller="AppCtrl as app" ng-cloak>
 <ul class="menu">
-    <li><a href="#/">Home</a></li>
-    <li><a href="#/search">Search</a></li>
-    <li><a href="#/new">Add your trip</a></li>
-    <li><a href="#/sign-up">Sign in</a></li>
-    <li><a href="#/sign-in">Sign up</a></li>
+    <li><a ui-sref="home">Home</a></li>
+    <li><a ui-sref="search">Search</a></li>
+    <li><a ui-sref="new">Add your trip</a></li>
+    <li><a ui-sref="sign-up">Sign in</a></li>
+    <li><a ui-sref="sign-in">Sign up</a></li>
 </ul>
 
 <!--[if lt IE 7]>
@@ -33,13 +33,14 @@
     your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<div ng-view></div>
+<div ui-view></div>
 
 <!-- In production use:
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
 -->
 <script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/angular-route/angular-route.js"></script>
+<!--<script src="bower_components/angular-route/angular-route.js"></script>-->
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 <script src="app.js"></script>
 <script src="js/view1.js"></script>
 <script src="js/searchCtrl.js"></script>

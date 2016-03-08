@@ -1,32 +1,55 @@
 // Add UI router here
 
-angular.module('travels.configuration', ['ngRoute'])
+angular.module('travels.configuration', [])
 
-    .config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.when('/', {
-            templateUrl: 'views/home.html',
-            controller: 'View1Ctrl'
-        });
+    .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 
-        $routeProvider.when('/search', {
-            templateUrl: 'views/search.html',
-            controller: 'SearchCtrl'
-        });
+        $urlRouterProvider.otherwise('home');
 
-        $routeProvider.when('/new', {
-            templateUrl: 'views/new.html',
-            controller: 'AppCtrl'
-        });
+        $stateProvider
 
-        $routeProvider.when('/sign-up', {
-            templateUrl: 'views/create-user.html',
-            controller: 'AppCtrl'
-        });
+            .state('home', {
+                url: '/',
+                templateUrl: 'views/home.html',
+                controller: 'AppCtrl'
+            })
 
-        $routeProvider.when('/sign-in', {
-            templateUrl: 'views/login-user.html',
-            controller: 'AppCtrl'
-        });
+            .state('search', {
+                url: '/search',
+                templateUrl: 'views/search.html',
+                controller: 'AppCtrl'
+            })
+
+            .state('new', {
+                url: '/new',
+                templateUrl: 'views/new.html',
+                controller: 'AppCtrl'
+            })
+
+            .state('sign-up', {
+                url: '/signup',
+                templateUrl: 'views/create-user.html',
+                controller: 'AppCtrl'
+            })
+
+            .state('sign-in', {
+                url: '/sign-in',
+                templateUrl: 'views/login-user.html',
+                controller: 'AppCtrl'
+            })
+
+            .state('add-destination', {
+                url: '/add-destination',
+                templateUrl: 'views/add-destination.html',
+                controller: 'AppCtrl'
+            })
+
+            .state('review', {
+                url: '/review',
+                templateUrl: 'views/review.html',
+                controller: 'AppCtrl'
+            });
+
 
     }]);
 
