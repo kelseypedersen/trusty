@@ -2,7 +2,9 @@
 
 
 angular.module('travels.controllers', [
-    'app'
+    'app',
+    'trip',
+    'details'
 ]);
 
 angular.module('travels.services', [

@@ -4,18 +4,20 @@
         Add your trip!
     </h2>
 
-    <label class="tt-heading__secondary">
+    <h3 class="tt-heading__secondary">
         Title
         <input class="tt-field tt-field__input" type="text" ng-model="app.data.trip_info.title">
-    </label>
+    </h3>
 
-    <label class="tt-heading__secondary">
+    <h3 class="tt-heading__secondary">
         Days
         <input class="tt-field tt-field__input" type="text" ng-model="app.data.trip_info.days">
-    </label>
+    </h3>
 
-    <label class="tt-heading__secondary">
-        Season
+    <div>
+        <h3 class="tt-heading__secondary">
+            Season
+        </h3>
         <label class="tt-heading__secondary">
             Spring
             <input class="tt-checkbox" type="checkbox" ng-model="app.data.trip_info.seasons.spring">
@@ -32,12 +34,28 @@
             Winter
             <input class="tt-checkbox" type="checkbox" ng-model="app.data.trip_info.seasons.winter">
         </label>
-    </label>
+    </div>
 
-    <label class="tt-heading__secondary">
-        Types
-        <input class="tt-checkbox" type="checkbox" ng-model="app.data.trip_info.activity_types">
-    </label>
+    <div>
+        <h3 class="tt-heading__secondary">
+            Types
+        </h3>
+        <label class="tt-heading__secondary">
+            Family
+            <input class="tt-checkbox" type="checkbox" ng-model="app.data.trip_info.activity_types.family">
+        </label>
+
+        <label class="tt-heading__secondary">
+            Adventure
+            <input class="tt-checkbox" type="checkbox" ng-model="app.data.trip_info.activity_types.adventure">
+        </label>
+
+        <label class="tt-heading__secondary">
+            Romance
+            <input class="tt-checkbox" type="checkbox" ng-model="app.data.trip_info.activity_types.romance">
+        </label>
+    </div>
+
 
     <div class="tt-submit-btn">
         <button class="tt-buttons__item btn-lg" ng-click="app.createTrip()">

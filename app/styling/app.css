@@ -28,3 +28,12 @@
   content: "";
   padding: 0;
 }
+
+.tt-card_trip {
+  background-color: yellow;
+  margin: 10px 0 10px 0;
+}
+
+.tt-input__search {
+  text-align: center;
+}

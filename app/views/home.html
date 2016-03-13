@@ -1,3 +1,21 @@
-<p>Home page for real</p>
+<div class="tt-home" ng-controller="TripCtrl">
 
-<p>Helllo!</p>
+  <div class="tt-input__search">
+    <input type="text" ng-model="searchBox" placeholder="Search" >
+  </div>
+
+
+  <div class="tt-card_trip" ng-repeat="trip in results | filter: searchBox">
+
+    <a ui-sref="trip/:id({id: trip.id})">
+
+    <li>{{ trip.title }}</li>
+    <li>{{ trip.season }}</li>
+    <li>{{ trip.days }} Days</li>
+    <li>{{ trip.activity_type }}</li>
+
+    </a>
+  </div>
+
+
+</div>

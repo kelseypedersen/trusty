@@ -1,42 +1,42 @@
 'use strict';
 
 angular.module('app', [])
-    .controller('AppCtrl', [
-        '$scope', '$location',
-        function ($scope, $location) {
+.controller('AppCtrl', [
+    '$scope', '$location',
+    function ($scope, $location) {
 
-            var app = this;
+          var app = this;
 
             /**
              * @type {createTrip}
              */
 
-            app.createTrip = createTrip;
+             app.createTrip = createTrip;
 
             /**
              * @type {showView}
              */
 
-            app.showView = showView;
+             app.showView = showView;
 
             /**
              * @type {addDestination}
              */
 
-            app.addDestination = addDestination;
+             app.addDestination = addDestination;
 
             /**
              * @type {reviewTrip}
              */
 
-            app.reviewTrip = reviewTrip;
+             app.reviewTrip = reviewTrip;
 
             /**
              * Error handling after a failed trip creation
              * @param response
              */
 
-            function createTripError(response) {
+             function createTripError(response) {
                 // Something like this...
                 // APIService.genericApiFailture(response)
                 if (response.data) {
@@ -57,13 +57,13 @@ angular.module('app', [])
                 //     app.showView('add-destinations');
                 //     // _kmq.push('record', 'TRIP_CREATE', app.data);
                 // }, createTripError);
-            }
+}
 
-            function showView(view) {
-                $location.path(view);
-            }
+function showView(view) {
+    $location.path(view);
+}
 
-            function addDestination() {
+function addDestination() {
                // Add logic to save destination to specific trip
                 // Then redirect to new destination page to add another destination
 
